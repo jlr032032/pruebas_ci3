@@ -4,8 +4,8 @@ $(function() {
 		var formData = new FormData();
 		event.preventDefault();
 		formData.set('text', $('#text').val());
-		formData.set('file1', $('#file1')[0].files);
-		formData.set('file2', $('#file2')[0].files);
+		formData.append('file1', $('#file1')[0].files[0]);
+		formData.append('file2', $('#file2')[0].files[0]);
 		$.ajax({
 			url: 'cargaArchivos/cargar',
 			data: formData,
