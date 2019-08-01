@@ -3,7 +3,7 @@ $(function() {
 	$('#req-btn').click(function(event) {
 		var formData = new FormData();
 		event.preventDefault();
-		formData.set('text', $('#text').val());
+		formData.append('text', $('#text').val());
 		formData.append('file1', $('#file1')[0].files[0]);
 		formData.append('file2', $('#file2')[0].files[0]);
 		$.ajax({
