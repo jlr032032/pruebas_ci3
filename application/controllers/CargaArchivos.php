@@ -30,10 +30,10 @@ class CargaArchivos extends CI_Controller {
 		$resultado->movimientoArchivo1 = new stdClass();
 		$resultado->movimientoArchivo2 = new stdClass();
 		$this->upload->do_upload('file1');
-		$resultado->movimientoArchivo1->error = $this->upload->display_errors();
+		$resultado->movimientoArchivo1->error = $this->upload->display_errors('','');
 		$resultado->movimientoArchivo1->data = $this->upload->data();
 		$this->upload->do_upload('file2');
-		$resultado->movimientoArchivo2->error = $this->upload->display_errors();
+		$resultado->movimientoArchivo2->error = $this->upload->display_errors('','');
 		$resultado->movimientoArchivo2->data = $this->upload->data();
 		$this->output->set_content_type('application/json')->set_output(
 			json_encode($resultado)
