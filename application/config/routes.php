@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Pruebas';
 $route['cargaArchivos'] = 'CargaArchivos/index';
-$route['cargaArchivos/cargar'] = 'CargaArchivos/cargar';
+$route['cargaArchivos/cargar/php'] = 'CargaArchivos/cargarConPHP';
+$route['cargaArchivos/cargar/ci3'] = 'CargaArchivos/cargarConCI3';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
